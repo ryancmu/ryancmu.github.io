@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="这一周非常的巧，因为有老兵节放假，所以只上了四天班，然而第四天因为下午VP请大家喝酒，所以总的来说只上了3天半的班。据说老兵节放假也是O家今年才有的，以前从来没有放过。感觉这一周基本没有干什么活就放假了，虽然之前几周也没有干什么活。一周结束，唯一的感觉就是周末过得比工作日累多了！">
+<meta name="description" content="这一周感觉是过得最快的一周，每天遇到一点小问题，然后稍微解决一下，一天就过去了。每天虽然不知道干了些什么，但是很充实，可能就是瞎忙活吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第五周-深入一个小bug">
-<meta property="og:url" content="http://yoursite.com/2016/11/14/第五周-深入一个小bug/index.html">
+<meta property="og:title" content="第六周-File了一个小bug">
+<meta property="og:url" content="http://yoursite.com/2016/11/22/第六周-File了一个小bug/index.html">
 <meta property="og:site_name" content="When You're Gone">
-<meta property="og:description" content="这一周非常的巧，因为有老兵节放假，所以只上了四天班，然而第四天因为下午VP请大家喝酒，所以总的来说只上了3天半的班。据说老兵节放假也是O家今年才有的，以前从来没有放过。感觉这一周基本没有干什么活就放假了，虽然之前几周也没有干什么活。一周结束，唯一的感觉就是周末过得比工作日累多了！">
-<meta property="og:updated_time" content="2016-11-15T06:46:58.000Z">
+<meta property="og:description" content="这一周感觉是过得最快的一周，每天遇到一点小问题，然后稍微解决一下，一天就过去了。每天虽然不知道干了些什么，但是很充实，可能就是瞎忙活吧。">
+<meta property="og:updated_time" content="2016-11-22T09:47:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第五周-深入一个小bug">
-<meta name="twitter:description" content="这一周非常的巧，因为有老兵节放假，所以只上了四天班，然而第四天因为下午VP请大家喝酒，所以总的来说只上了3天半的班。据说老兵节放假也是O家今年才有的，以前从来没有放过。感觉这一周基本没有干什么活就放假了，虽然之前几周也没有干什么活。一周结束，唯一的感觉就是周末过得比工作日累多了！">
+<meta name="twitter:title" content="第六周-File了一个小bug">
+<meta name="twitter:description" content="这一周感觉是过得最快的一周，每天遇到一点小问题，然后稍微解决一下，一天就过去了。每天虽然不知道干了些什么，但是很充实，可能就是瞎忙活吧。">
 
 
 
@@ -114,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/14/第五周-深入一个小bug/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/22/第六周-File了一个小bug/"/>
 
-  <title> 第五周-深入一个小bug | When You're Gone </title>
+  <title> 第六周-File了一个小bug | When You're Gone </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +246,7 @@
             
             
               
-                第五周-深入一个小bug
+                第六周-File了一个小bug
               
             
           </h1>
@@ -258,8 +258,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-14T22:46:58-08:00" content="2016-11-14">
-              2016-11-14
+            <time itemprop="dateCreated" datetime="2016-11-22T01:47:36-08:00" content="2016-11-22">
+              2016-11-22
             </time>
           </span>
 
@@ -286,10 +286,11 @@
       
 
       
-        <p>这一周非常的巧，因为有老兵节放假，所以只上了四天班，然而第四天因为下午VP请大家喝酒，所以总的来说只上了3天半的班。据说老兵节放假也是O家今年才有的，以前从来没有放过。感觉这一周基本没有干什么活就放假了，虽然之前几周也没有干什么活。一周结束，唯一的感觉就是周末过得比工作日累多了！<br><a id="more"></a></p>
-<p>总的来说，工作上，这一周主要是分析了一个小bug。解决方案非常的简单，但是弄明白为什么要这么解决，就得学另外的一些东西了。在对一句命令的读取时发生了错误，可以在一个字母一个字母读时就处理掉，也可以在全部读完后再进行处理，为什么这儿要在事后进行处理，困扰了我好几天，需要去学习和理解lex和yyparse的工作原理。花了些功夫去看，以及louis也跟我讲了讲，稍微整明白了这个在对命令行解析上的强大之处，可以说这个玩意完全可以当做一个complier来用了。同时，因为我的胡乱尝试，也发现了gettext函数的一个locale方面的小bug。这个小bug非常困扰我，因为我到现在也还不明白locale到底是根据什么来确定的。奇怪之处在于，如果这个是因为用户的一些设定来确定的话，我切换了root权限，应该使用的是全局的设定，为什么还是会关联到我的locale设定呢？到现在我也没整明白这一点，估计要去stackoverflow发个贴子了。</p>
-<p>生活上，周末真的好累，周五陪同学练了一天车，周六开了200多mile去了Napa，周日稍微轻松点，来了个密室逃脱。平时在家和鹏博士完全就是两个游戏少年，每天晚上都是瘫在沙发上打游戏，不过这周我们把Gear of War给通关了，还是相当给力的。这周心怡的车被碰了一下，还是挺心疼的，毕竟新车。去body<br>shop一问修一下要3600+，简直是抢钱啊，以后开车要谨慎，不然真的要割肉了。周六的Napa相当赞，我本来就喜欢开车，能开这么远，已经很开心了，而且还能看到一望无际的葡萄园，品一品各种葡萄酒，简直是享受啊。这次我们是报了一个中文的tour，会带你参观Robert Mondavi酒庄，讲解一些种植葡萄和酿酒的知识，并且教你品三款经典的葡萄酒。之后是去了一个叫做V. Sattui的酒庄，两个酒庄有明显的经营理念的不同，这个酒庄是完全开放的，酒也不会在外面销售，想买它家的酒只能在酒庄里面买。而Mondavi的话，就是个很传统的大酒庄了，上市公司，它的酒在外面很容易买到。周日的密室逃脱设计的很精妙，一层套一层的房间，虽然自己木有贡献什么，但是能逃出来就满足了。</p>
-<p>新的一周，还是希望自己能妥善的支配好自己的时间，不要浪费时间了！</p>
+        <p>这一周感觉是过得最快的一周，每天遇到一点小问题，然后稍微解决一下，一天就过去了。每天虽然不知道干了些什么，但是很充实，可能就是瞎忙活吧。</p>
+<a id="more"></a>
+<p>这周工作上，一个小bug解决了几周，本周本来准备提交一下，结果这种出问题。首先是code review没有通过，像这样tricky的解决方案，最好得有注释在这个上面。然后是跑了测试的机器被别人停了，结果还没有拿出来，等于白跑了测试。然后跟amit要来了新机器，又遇到了从11升到12的升级的问题，然后又遇到了一个Flag<br>Day问题，最后的竟然ZTS没有跑过。就是在这样一堆小问题中一周过去了，bug依旧没有提交。不过这一周学到了不少东西，Amit非常详细的跟我讲解了什么是Flag Day，什么是Consle，什么是ILOM。并且这一周由于各种原因，几个meeting都取消了，不过还是发了一份weekly report给mark。周五下午，NCG举办了游戏活动，猜单词、猜歌曲，这样的游戏对我这样英语不咋的人来说太吃亏了。</p>
+<p>生活上，这周吃到了期待已久的螺蛳粉，虽然vela反映没有北京的螺蛳粉先生好吃，但是我感觉已经很不错了，至少够辣，虽然臭味差了一点。这周突然决定了要去阿拉斯加，然后就开始各种扒攻略，看机票和酒店。虽然目前来说可能这趟旅程要被取消了，但是一趟攻略做下来，对阿拉斯加倒是了解不了不少。这周还意外喜欢上了台球，有鹏博带着感觉能学到不少，以前实在是太乱打了，技术太差了！</p>
+<p>这周很平淡，没有太多的可说了，希望下一周工作顺利，多干点活！</p>
 
       
     </div>
@@ -323,17 +324,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/07/第四周-为Solaris贡献了五行代码/" rel="next" title="第四周-为Solaris贡献了五行代码">
-                <i class="fa fa-chevron-left"></i> 第四周-为Solaris贡献了五行代码
+              <a href="/2016/11/14/第五周-深入一个小bug/" rel="next" title="第五周-深入一个小bug">
+                <i class="fa fa-chevron-left"></i> 第五周-深入一个小bug
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/22/第六周-File了一个小bug/" rel="prev" title="第六周-File了一个小bug">
-                第六周-File了一个小bug <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
